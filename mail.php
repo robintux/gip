@@ -17,7 +17,7 @@ $email_to  = 'larisan@post.tau.ac.il';
 // take the two slash marks out of the line below if you want to enter a custom from address
 //$from      = 'cgi-mailer@perfora.net';
 ///choose any subject you want
-$subject   = 'GIP 2014 - registration';
+$subject   = 'GIP 2015 - registration';
 
 
 
@@ -52,7 +52,7 @@ if ( !empty($_POST['email']) ) {
 	
 	
 
-$headers .= "From:\"GIP 2014\" <noreply@post.tau.ac.il>\r\nContent-type: text/html; charset=windows-1255\r\n";
+$headers .= "From:\"GIP 2015\" <noreply@post.tau.ac.il>\r\nContent-type: text/html; charset=windows-1255\r\n";
 	
 	
 	// attempt to send the submission via email to the address specified at
