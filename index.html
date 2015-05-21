@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Gentle Introduction to CS 2014</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/footer.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+  
+  </style>
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="masthead">
+      <h3 class="muted">
+        Gentle Introduction to Programming / Summer 2014
+      </h3>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav" id="menu">
+              <li id="admin"><a href="javascript:change_tab('admin')">Admin</a></li>
+              <li id="registration"><a href="javascript:change_tab('registration')">Registration</a></li>
+              <li id="announcements"><a href="javascript:change_tab('announcements')">Announcements</a></li>
+              <li id="sessions"><a href="javascript:change_tab('sessions')">Sessions</a></li>
+              <li id="faq"><a href="javascript:change_tab('faq')">FAQ</a></li>   
+              <li id="forum"><a href="https://piazza.com/tau.ac.il/summer2014/gip2014" target="_blank">Forum</a></li>   
+            </ul>
+          </div>
+        </div>
+      </div><!-- /.navbar -->
+    </div>
+
+    <script type="text/javascript">
+    function change_tab(selection) {
+      $.ajax({
+        url: selection + ".html",
+        dataType: "html",
+        cache: false,
+        success: function(data) {
+          $('#menu').children().removeClass();
+          $('#'+selection).addClass('active');
+          $("#title").html(selection.charAt(0).toUpperCase() + selection.slice(1));
+          $("#content").fadeOut(function() {
+            $(this).html(data).slideDown();
+          });
+        }
+      });
+    }
+    change_tab("admin");
+    </script>
+
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="container">
+        <h4 style="text-align: center" id="title">
+        </h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="container" id="content">
+
+      </div>
+    </div>
+
+    <footer class="colophon"> 
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="http://www.tau.ac.il" target="_blank">Tel-Aviv University</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://maintenance.tau.ac.il/halls/" target="_blank">University Map</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://cs.tau.ac.il" target="_blank">School of Computer Science</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://python.org/" target="_blank">Python</a></li>
+        </ul>
+        <p>
+          Source code licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> | 
+          <a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> | <a href="http://bootswatch.com/2/united/" target="_blank">Bootswatch United theme</a> licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache v2.0</a>.
+        </p>
+        <p>
+          <a href="http://cs.tau.ac.il"><img src="img/TAU-CS-full-300px.png"></a>
+        </p>
+        
+      </div>
+    </footer>
+
+  </body>
+
+  </html>
