@@ -4,7 +4,7 @@ This is the website for a course given in School of Computer Science of Tel-Aviv
 It is offered to Computer Science students before they start their 1st undergraduate year.
 The goal of the course is to bridge the gap between students with and without programming expirience.
 The course providesa a gentle introduction and a basic background in the Python programming language, 
-as the first academic course in which the students will learn programming is [Extended Intro to CS])(http://tau-cs1001-py.wikidot.com/) which is given in Python.
+as the first academic course in which the students will learn programming is [Extended Intro to CS](http://tau-cs1001-py.wikidot.com/) which is given in Python.
 
 ## Technicalities
 
